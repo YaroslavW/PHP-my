@@ -1,0 +1,31 @@
+
+<?php
+
+$p = 1287;
+if($p < 10)
+	$p0 = $p;
+elseif($p <100)
+	$p0 = ($p % 10);
+elseif($p < 1000)
+	$p0 =($p % 100);
+	else
+		$p0 =($p % 1000);
+if($p0 == 1)
+	$ps ='посетитель';
+elseif(($p0 >= 2) && ($p0 < 5))
+	$ps ='посетителя';
+else
+	$ps ='постителей';
+
+?>
+<!DOCTYPE html>
+ <html>
+    <head>
+      <title>Мой сайт на php</title>
+      <meta charset="utf-8"/>
+    </head>
+    <body>
+	<? echo "$p $ps";/*echo "$h $hs $i $is";*/?>
+	<h1> </h1>
+    </body>
+  </html>
