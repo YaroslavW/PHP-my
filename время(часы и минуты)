@@ -1,0 +1,37 @@
+
+<?php
+$h = date("H");
+$i = date("i");
+
+if(($h == 1) || ($h == 21))
+	$hs = 'час';
+elseif(($h <= 4) || ($h >= 22))
+	$hs = 'часа';
+else
+	$hs = 'часов';	
+
+if($i < 10)
+	$i0 = $i;
+else
+	$i0 = ($i % 10);
+
+if(($i >= 10)&&($i <=20))
+	$is = 'минут';
+elseif($i0 == 1)
+	$is = 'минута';
+elseif(($i0 >=2 && $i0 <= 4))
+	$is = 'минуты';	
+else
+	$is = 'минут';	
+?>
+<!DOCTYPE html>
+ <html>
+    <head>
+      <title>Мой сайт на php</title>
+      <meta charset="utf-8"/>
+    </head>
+    <body><!-- style="width:100%; height: 760px; background: url(img/echo $img;?>.jpg);">-->
+	<? echo "$h $hs $i $is";?>
+	<h1> </h1>
+    </body>
+  </html>
