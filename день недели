@@ -1,0 +1,39 @@
+<? 
+$giorno[0]="<p>It is Sunday</p>"; 
+$giorno[1]="<p>It is Monday"</p>; 
+$giorno[2]="<p>It is Tuesday"</p>; 
+$giorno[3]="<p>It is Wednesday"</p>; 
+$giorno[4]="<p>It is Thursday</p>""; 
+$giorno[5]="<p>It is Friday</p>"; 
+$giorno[6]="<p>It is Saturday</p>"; 
+$gisett=(int)date("w"); 
+echo $giorno[$gisett]; 
+?> 
+
+//или так:
+<?php
+$dayofweek = date("w");
+switch ($dayofweek){
+case 1:
+echo "<p>It is Monday</p>";
+break;
+case 2:
+echo "<p>It is Tuesday</p>";
+break;
+case 3:
+echo "<p>It is Wednesday</p>";
+break;
+case 4 :
+echo "<p>It is Thursday</p>";
+break;
+case 5:
+echo "<p>It is Friday</p>";
+break;
+case 6:
+echo "<p>It is Saturday</p>";
+break;
+case 0:
+echo "<p>It is Sunday</p>";
+break;
+}
+?>
