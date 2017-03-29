@@ -1,0 +1,34 @@
+Start a PHP Session
+
+A session is started using the session_start() function.
+Use the PHP global $_SESSION to set session variables.
+<?php
+// Start the session
+session_start();
+
+$_SESSION['color'] = "red";
+$_SESSION['name'] = "John";
+?>
+
+Now, the color and name session variables are accessible on multiple pages, throughout the entire session.
+The session_start() function must be the very first thing in your document. Before any HTML tags.
+
+Session Variables
+
+Another page can be created that can access the session variables we set in the previous page:
+<?php
+// Start the session
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+echo "Your name is " . $_SESSION['name'];
+// Outputs "Your name is John"
+?>
+</body>
+</html>
+
+Your session variables remain available in the $_SESSION superglobal until you close your session.
+All global session variables can be removed manually by using session_unset(). You can also destroy the session with session_destroy().
