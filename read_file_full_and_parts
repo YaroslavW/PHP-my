@@ -1,0 +1,10 @@
+//Страница целиком
+<?php
+ echo file_get_contents("http://oreilly.com");
+?>
+//Чтение файла - трансляция на страницу
+<?php
+ echo "<pre>"; // Тег, позволяющий отображать переводы строк
+ echo file_get_contents("testfile.txt");
+ echo "</pre>"; // Прекращение действия тега pre
+?>
